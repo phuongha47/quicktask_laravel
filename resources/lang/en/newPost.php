@@ -3,7 +3,7 @@ return [
     'page_add' => "Add new Post",
     'title' => "Title",
     'body' => "Body",
-    'author' => "Author",
+    'authorEmail' => "Mail",
     'insert' => "Body",
     'back' => 'Back',
 ]

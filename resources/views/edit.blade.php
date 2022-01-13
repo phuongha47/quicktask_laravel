@@ -17,5 +17,14 @@
         </div>
         <input type="submit" value="{{ __('updatePost.update') }}" class="btn btn-success">
     </form>
-</div>   
+</div>  
+@if ($errors->any())
+        <div class="alert alert-danger w-25 alert_center">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+@endif 
 @endsection

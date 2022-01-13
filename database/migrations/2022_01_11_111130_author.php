@@ -16,6 +16,7 @@ class Author extends Migration
         Schema::create('author', function (Blueprint $table) {
             $table->increments('author_id');
             $table->string('name');
+            $table->string('email');
             $table->timestamps();
         });
     }
