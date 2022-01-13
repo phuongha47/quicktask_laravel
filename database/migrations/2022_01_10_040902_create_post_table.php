@@ -19,7 +19,7 @@ class CreatePostTable extends Migration
             $table->text('body');
             $table->integer('post_author')->unsigned();
             $table->foreign('post_author')
-                ->references('author_id')
+                ->references('email')
                 ->on('posts')
                 ->onDelete('cascade');
             $table->timestamps();

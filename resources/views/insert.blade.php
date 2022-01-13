@@ -15,7 +15,7 @@
             <input type="text" name="body" class = "form-control">
         </div>
         <div class="mb-3">
-            <label for=""><b>{{ __('newPost.author') }}</b></label>
+            <label for=""><b>{{ __('newPost.authorEmail') }}</b></label>
             <input type="text" name="post_author" class = "form-control">
         </div>
         <input type="submit" value="{{ __('newPost.insert') }}" class="btn btn-primary">

@@ -26,7 +26,7 @@ class AddPostRequest extends FormRequest
         return [
             'title' => 'required|max:100',
             'body' => 'required|min:10|max:5000',
-            'post_author' => 'exists:mysql.author,author_id',
+            'post_author' => 'required|email|exists:mysql.author,email',
         ];
     }
 }

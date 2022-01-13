@@ -28,7 +28,7 @@ class PostController extends Controller
         return view('author', compact(['posts'])); 
     }
 
-    public function showDetail(Post $post, $id)
+    public function showDetail(Request $request, $id)
     {
         $posts = Post::findOrFail($id)->load('author');
 
@@ -64,7 +64,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show()
     {
         $posts = Post::all();
         
@@ -78,7 +78,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post, $id)
+    public function edit(Request $request, $id)
     {
         $posts = Post::findOrFail($id);
 
@@ -92,7 +92,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(EditPostRequest $request, Post $post, $id)
+    public function update(EditPostRequest $request, $id)
     {
         $posts = Post::findOrFail($id);
         $posts->update($request->all());
@@ -106,7 +106,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post, $id)
+    public function destroy(Request $request, $id)
     {
        $posts = Post::findOrFail($id);
        $posts->delete();

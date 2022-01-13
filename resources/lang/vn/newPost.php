@@ -3,7 +3,7 @@ return [
     'page_add' => "Thêm bài viết mới",
     'title' => "Tiêu đề",
     'body' => "Nội dung",
-    'author' => "Tác giả",
+    'authorEmail' => "E-mail",
     'insert' => "Thêm",
     'back' => 'Trở lại',
 ]
